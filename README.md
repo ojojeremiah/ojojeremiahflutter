@@ -6,7 +6,9 @@ In this Project I learnt and I used,
 Classes,
 
 Constructors,
+
 Listview widget,
+
 Lists,
 
 Container widget,
@@ -21,4 +23,6 @@ Buttons
 
 Icons
 
-Custom widget
+Custom widgets
+
+Card widget
