@@ -18,40 +18,44 @@ class _NavBarState extends State<NavBar> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 200,
+      width: 100,
       height: 200,
       child: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
-            DrawerHeader(
-              child:Container(
-                margin: EdgeInsets.only(right: 400),
-                child:  IconButton(onPressed: (){
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context)=> const MyApp()));
-                }, icon: Icon(Icons.close, size: 30)),
-              )
-            ),
-            ListTile(
-              leading: Icon(Icons.person_outline),
-              title: Text('Profile'),
-              onTap: (){},
-            ),
-            ListTile(
-              leading: Icon(Icons.history),
-              title: Text('history'),
-              onTap: (){},
-            ),
-            ListTile(
-              leading: Icon(Icons.settings),
-              title: Text('Settings'),
-              onTap: (){},
-            ),
-            ListTile(
-              leading: Icon(Icons.interests),
-              title: Text('Express'),
-              onTap: (){},
+          Container(
+            margin: EdgeInsets.only(top: 100, right: 350),
+            child:   IconButton(onPressed: (){
+              Navigator.pop(context);
+            }, icon: Icon(Icons.close))
+          ),
+            Container(
+              margin: EdgeInsets.only(top: 100),
+              child:  Column(
+                children: [
+                  ListTile(
+                    leading: Icon(Icons.person_outline),
+                    title: Text('Profile'),
+                    onTap: (){},
+                  ),
+                  ListTile(
+                    leading: Icon(Icons.history),
+                    title: Text('history'),
+                    onTap: (){},
+                  ),
+                  ListTile(
+                    leading: Icon(Icons.settings),
+                    title: Text('Settings'),
+                    onTap: (){},
+                  ),
+                  ListTile(
+                    leading: Icon(Icons.interests),
+                    title: Text('fly-Express'),
+                    onTap: (){},
+                  )
+                ],
+              ),
             )
           ],
         ),
